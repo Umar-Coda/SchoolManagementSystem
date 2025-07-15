@@ -1,0 +1,13 @@
+﻿global using SMSBusinessLogicLayer.Interfaces;
+global using SMSBusinessLogicLayer.Services;
+global using SMSBusinessLogicLayer.Utilities;
+global using SMSDataLayer.Repositories;
+global using SMSDataLayer.Interfaces;
+global using SMSModels.Models;
+global using SMSModels.DTOs;
+global using SMSModels.SelectData;
+global using SMSModels.Models.Structs;
+global using SMSModels;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.SqlServer;
+global using Microsoft.EntityFrameworkCore.Design;
