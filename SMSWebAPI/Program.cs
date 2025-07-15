@@ -1,13 +1,15 @@
 
 using SMSBusinessLogicLayer;
+using SMSDataLayer.Contexts;
+using System;
 
 namespace SMSWebAPI {
     public class Program {
         public static void Main(string[] args) {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Register Dependencies
-            builder.Services.AddBusinessServices();
+            builder.Services.AddDbContext<SchoolContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             builder.Services.AddCors(options =>
             {
