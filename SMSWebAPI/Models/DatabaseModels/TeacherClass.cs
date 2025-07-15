@@ -1,6 +1,5 @@
 ﻿namespace SMSWebAPI.Models.DatabaseModels {
     public class TeacherClass {
-        public class TeacherClass {
             public int TeacherClassId { get; set; }
 
             // Related Tables
@@ -8,6 +7,5 @@
             public Teacher? Teacher { get; set; }
             public int ClassId { get; set; }
             public Class? Class { get; set; }
-        }
     }
 }

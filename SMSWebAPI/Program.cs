@@ -1,7 +1,4 @@
 
-using SMSBusinessLogicLayer;
-using SMSDataLayer.Contexts;
-using System;
 
 namespace SMSWebAPI {
     public class Program {

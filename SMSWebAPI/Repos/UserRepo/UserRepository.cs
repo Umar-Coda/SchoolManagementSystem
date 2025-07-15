@@ -1,4 +1,4 @@
-﻿using SMSDataLayer.Contexts;
+﻿;
 
 namespace SMSWebAPI.Repos.UserRepo {
     public class UserRepository : BaseRepository<User>, IUserRepository {

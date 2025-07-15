@@ -1,5 +1,5 @@
 ﻿namespace SMSWebAPI.Models.DatabaseModels {
-    public class Student {
+    public class Student : Person {
         public int StudentId { get; set; }
         public DateTime EnrollmentDate { get; set; }
 

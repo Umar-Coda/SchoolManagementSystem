@@ -1,5 +1,4 @@
-﻿using SMSDataLayer.Contexts;
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
 
 namespace SMSWebAPI.Repos {
     public class BaseRepository<T> : IRepository<T> where T : class {
