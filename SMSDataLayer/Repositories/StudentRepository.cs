@@ -20,6 +20,13 @@ public class StudentRepository : BaseRepository<Student>, IStudentRepository {
         return data;
     }
 
+    public string GetStudentName(int studentId) {
+        return _dbSet
+            .Where(s => s.StudentId == studentId)
+            .Select(s => $"{s.Firstname} {s.Lastname}")
+            .FirstOrDefault() ?? string.Empty;
+    }
+
     public void Update(Student student, Student newStudent) {
         throw new NotImplementedException();
     }

@@ -5,15 +5,36 @@ namespace SMSBusinessLogicLayer.Services;
 public class EntityDeletionService : IEntityDeletionService {
     private readonly IRepositoryFactory _repositoryFactory;
 
-    public EntityDeletionService(IRepositoryFactory repositoryFactory) 
-        { _repositoryFactory = repositoryFactory; }
+    public EntityDeletionService(IRepositoryFactory repositoryFactory) {
+        _repositoryFactory = repositoryFactory;
+    }
 
     public string DeleteAnnouncement(Announcement announcement) {
-        throw new NotImplementedException();
+        string message = string.Empty;
+
+        try {
+            var announcementRepo = _repositoryFactory.GetAnnouncementRepository();
+            announcementRepo.Delete(announcement);
+            message = "Announcement deleted successfully";
+        } catch (Exception ex) {
+            message = ex.Message;
+        }
+
+        return message;
     }
 
     public string DeleteAttendance(Attendance attendance) {
-        throw new NotImplementedException();
+        string message = string.Empty;
+
+        try {
+            var attendanceRepo = _repositoryFactory.GetAttendanceRepository();
+            attendanceRepo.Delete(attendance);
+            message = "Attendance record deleted successfully";
+        } catch (Exception ex) {
+            message = ex.Message;
+        }
+
+        return message;
     }
 
     public string DeleteClass(Class @class) {
@@ -22,7 +43,7 @@ public class EntityDeletionService : IEntityDeletionService {
         try {
             var classRepo = _repositoryFactory.GetClassRepository();
             classRepo.Delete(@class);
-            message = "Class deletd successfully";
+            message = "Class deleted successfully";
         } catch (Exception ex) {
             message = ex.Message;
         }
@@ -37,7 +58,7 @@ public class EntityDeletionService : IEntityDeletionService {
             var coordinatorRepo = _repositoryFactory.GetCoordinatorRepository();
             coordinatorRepo.Delete(coordinator);
             message = "Coordinator deleted successfully";
-        } catch(Exception ex) {
+        } catch (Exception ex) {
             message = ex.Message;
         }
 
@@ -65,7 +86,7 @@ public class EntityDeletionService : IEntityDeletionService {
             var facultyRepo = _repositoryFactory.GetFacultyRepository();
             facultyRepo.Delete(faculty);
             message = "Faculty deleted successfully";
-        } catch(Exception ex) {
+        } catch (Exception ex) {
             message = ex.Message;
         }
 
@@ -79,7 +100,7 @@ public class EntityDeletionService : IEntityDeletionService {
             var feeRepo = _repositoryFactory.GetFeeRepository();
             feeRepo.Delete(fee);
             message = "Fee deleted successfully";
-        } catch(Exception ex) {
+        } catch (Exception ex) {
             message = ex.Message;
         }
 
@@ -93,7 +114,7 @@ public class EntityDeletionService : IEntityDeletionService {
             var roleRepo = _repositoryFactory.GetRoleRepository();
             roleRepo.Delete(role);
             message = "Role deleted successfully";
-        } catch(Exception ex) {
+        } catch (Exception ex) {
             message = ex.Message;
         }
 
@@ -101,7 +122,17 @@ public class EntityDeletionService : IEntityDeletionService {
     }
 
     public string DeleteStudent(Student student) {
-        throw new NotImplementedException();
+        string message = string.Empty;
+
+        try {
+            var studentRepo = _repositoryFactory.GetStudentRepository();
+            studentRepo.Delete(student);
+            message = "Student deleted successfully";
+        } catch (Exception ex) {
+            message = ex.Message;
+        }
+
+        return message;
     }
 
     public string DeleteSubject(Subject subject) {
@@ -119,10 +150,31 @@ public class EntityDeletionService : IEntityDeletionService {
     }
 
     public string DeleteTeacher(Teacher teacher) {
-        throw new NotImplementedException();
+        string message = string.Empty;
+
+        try {
+            var teacherRepo = _repositoryFactory.GetTeacherRepository();
+            teacherRepo.Delete(teacher);
+            message = "Teacher deleted successfully";
+        } catch (Exception ex) {
+            message = ex.Message;
+        }
+
+        return message;
     }
 
     public string DeleteTimetable(Timetable timetable) {
-        throw new NotImplementedException();
+        string message = string.Empty;
+
+        try {
+            var timetableRepo = _repositoryFactory.GetTimetableRepository();
+            timetableRepo.Delete(timetable);
+            message = "Timetable deleted successfully";
+        } catch (Exception ex) {
+            message = ex.Message;
+        }
+
+        return message;
     }
 }
+

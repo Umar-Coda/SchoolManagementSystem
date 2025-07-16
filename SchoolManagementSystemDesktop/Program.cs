@@ -58,10 +58,11 @@ namespace SchoolManagementSystemDesktop {
             var serviceProvider = host.Services;
 
             ApplicationConfiguration.Initialize();
-            var loginView = serviceProvider.GetRequiredService<ILoginView>();
-            var authService = serviceProvider.GetRequiredService<IAuthenticationService>();
-            var presenter = new AuthController(loginView, authService);
-            Application.Run(loginView as Form);
+            //var loginView = serviceProvider.GetRequiredService<ILoginView>();
+            //var authService = serviceProvider.GetRequiredService<IAuthenticationService>();
+            //var presenter = new AuthController(loginView, authService);
+            //Application.Run(loginView as Form);
+            Application.Run(serviceProvider.GetRequiredService<LoginView>());
         }
     } 
 }

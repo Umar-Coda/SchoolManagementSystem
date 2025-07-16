@@ -7,5 +7,6 @@ namespace SMSDataLayer.Interfaces {
         public T Get(int id);
         public List<T> GetAll();
         public void UpdateFields(T entity, params Expression<Func<T, object>>[] updatedProperties);
+        public void Update(T entity);
     }
 }

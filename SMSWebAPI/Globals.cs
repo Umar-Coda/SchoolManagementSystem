@@ -8,3 +8,4 @@ global using SMSWebAPI.Repos.LoginRepo;
 global using SMSWebAPI.Repos.UserRepo;
 global using SMSWebAPI.Context;
 global using SMSWebAPI.Models.LoginModels;
+global using SMSWebAPI.Repos;

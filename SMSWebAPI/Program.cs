@@ -1,5 +1,8 @@
 
 
+using SMSWebAPI.Repos.RoleRepo;
+using SMSWebAPI.Services;
+
 namespace SMSWebAPI {
     public class Program {
         public static void Main(string[] args) {
@@ -7,6 +10,12 @@ namespace SMSWebAPI {
 
             builder.Services.AddDbContext<SchoolContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            builder.Services.AddScoped<IUserRepository, UserRepository>();
+            builder.Services.AddScoped<ILoginRepository, LoginRepository>();
+            builder.Services.AddScoped<IRoleRepository, RoleRepository>();
+
+            builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 
             builder.Services.AddCors(options =>
             {
