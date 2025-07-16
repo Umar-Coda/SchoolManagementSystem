@@ -3,4 +3,5 @@ public interface IEntityCreationService {
     public OperationResult AddSubject(Subject subject);
     public OperationResult AddFaculty(Faculty faculty);
     public OperationResult AddCourse(Course course);
+    public OperationResult AddClass(Class @class);
 }

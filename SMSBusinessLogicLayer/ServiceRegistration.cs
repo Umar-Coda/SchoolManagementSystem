@@ -23,6 +23,8 @@ namespace SMSBusinessLogicLayer {
             services.AddScoped<IFeeRepository, FeeRepository>();
             services.AddScoped<ITimetableRepository, TimetableRepository>();
             services.AddScoped<INotificationQueueRepository, NotificationQueueRepository>();
+            services.AddScoped<ITeacherRepository, TeacherRepository>();
+            services.AddScoped<IStudentRepository, StudentRepository>();
 
             // Register Repo Factory
             services.AddScoped<IRepositoryFactory, RepositoryFactory>();
@@ -36,6 +38,8 @@ namespace SMSBusinessLogicLayer {
             services.AddScoped<IRoleService, RoleService>();
             services.AddScoped<ISubjectService, SubjectService>();
             services.AddScoped<ICoordinatorService, CoordinatorService>();
+            services.AddScoped<ITeacherService, TeacherService>();
+            services.AddScoped<IStudentService, StudentService>();
             services.AddScoped<IFacultyService, FacultyService>();
             services.AddScoped<ICourseService, CourseService>();
             services.AddScoped<IEntityDeletionService, EntityDeletionService>();
